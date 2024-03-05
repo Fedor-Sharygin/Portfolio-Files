@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigiPen Experience</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #9fc5e8;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  h3 {
+    color: #db9002;
+    text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+  }
+  p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  }
+
+  .header {
+    background-color: #5977ea;
+    color: #ff9900;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+  }
+  .subheader {
+    background-color: #6da6fa;
+    color: #ff9900;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .column {
+    flex: 1;
+    background-color: #7cd3fb;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .elementholder {
+    background-color: #7f89fa;
+    padding: 2px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+  }
+
+  .imgcolumn {
+    float: left;
+    width: 45%;
+    padding: 5px;
+  }
+  .imgrow::after {
+    content: "";
+    clear: both;
+    display: table;
+    background-color: #7cd3fb;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>DigiPen Institute of Technology</h1>
+</div>
+
+<div class="subheader">
+  <h2>MSCS - Game Artificial Intelligence</h2>
+</div>
+
+<div class="imgrow">
+  <div class="imgcolumn">
+    <img src="https://www.digipen.edu/sites/default/files/public/img/about/about-digipen/05-body/digipen-institute-of-technology-redmond-campus.jpg" alt="digipen-building" style="width: 150%; height: auto;"/>
+  </div>
+  <div class="imgcolumn">
+    <img src="https://www.digipen.edu/sites/default/files/public/img/news/05-body/digipen-dragon-banner.jpg" alt="digipen-logo" style="width: 50%; height: auto;"/>
+  </div>
+</div>
+
+<div class="container">
+  <div class="column">
+    <h3>Ball 2 the Wall - GAM551</h3>
+    <p>Ball 2 the Wall (B2TW) is a game made completely in a custom OpenGL engine by the team Rafflesia: Thomas Spalter, Nathan Weise, Dylan Washburne, Xingyu Brandon Wang, Arthur Chang, Kishore Kandasamy Balakrishnan, Fedor Sharygin (listed as Theodore Sherman Sharygin). My main role was implementing UI elements and helping with Physics calculations.</p>
+    <div class="elementholder">
+        <p>Implemented and designed the UI for the game B2TW, where only UI available was Debug (non-user-friendly) IMGUI using OpenGL and JSON UI descriptions.</p>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY8YPaQ1v0gzCx1MoSDMHtOW9WRDccZ3MhnL0f91-vsOnzWIZLJghPq_vjCMvbCFsHonYyphkLaGMx2GxnebHYkqKEIkA=s1600" alt="b2tw-mainmenu" alt="b2tw-mainmenu"/>
+    </div>
+    <div class="elementholder">
+        <p>Worked closely with Kishore Kandasamy Balakrishnan to fix logic issue, where a dynamic sphere would go through a tilted plane.</p>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihamw-KyIXdUs6wK5qNMrmPWcQ3GKTr3dTjX5NomgNwrXmIRpgRYyQk2YjdC4F_Xq5MAN0GuoOr7c05_yeNI_x1P1jov=s2560" alt="b2tw-lvl6-gif"/>
+    </div>
+    <div class="elementholder">
+        <p>With assistance from Xingyu Brandon Wang have create the particle system, showcasing the connection between button and inactive platforms.</p>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY3-4DdTRBVvDzsBgHxAgGX0ScxQ1Qvjnx2aV4BHc79ivc1hTDSS6ggoiv99-d8Q1pNNknRYe0YIZV28sh7aW_nBjfruA=s2560" alt="b2tw-lvl10-gif"/>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Game AI - CS580, CS582</h3>
+    <p>CS580 - Game AI classes by Dmitri Volper and Steve Rabin, which teach best approaches to implementing Game AI, including player action reactions, pathfinding (A* + smoothing, NavMeshes), behavior trees</p>
+    <div class="elementholder">
+        <p>Implemented A* algorithm that utilizes different heuristics (Octile, Chebyshev, Manhattan, Euclidian) to find the most optimal path from the original position to the clicked position.</p>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbmYviedY4Ka9apkwLGP2V5Q2sAfK27329_D0KI3_wLL4EJ9QAlExhCtMNgk893Efo7L4F1eQk5GsKHhIRe84WwtY1bpQ=s2560" alt="cs580-astar-exe"/>
+    </div>
+    <div class="elementholder">
+        <p>Collaborated with Matt Haynie on a project that optimized path walking of a game AI character to utilize the most direct path possible using Signed Distance Functions (SDF) for smoothing.</p>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpiha_yf91wF150GvFba-XKTxC5ZCPPzbkMSEtlUC2Q7i2CODwkX8gj0MAETO4aFtRfvWaY8kj2SL9lJxO18IWlFClTB_V2Q=s1600" alt="cs580-astar-exe"/>
+    </div>
+    <div class="elementholder">
+        <p>Used knowledge on the subject of Behavior trees on personal projects and Bachelor Project "Valkyrie Quest" (behavior tree below is not mine).</p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsuperyateam.com%2Fwp-content%2Fuploads%2F2019%2F03%2FBT_Running.gif&f=1&nofb=1&ipt=58a05d37166b3d6ff77090ee4566731e4ccc46d1f8dc3d5a65ec7b34736af598&ipo=images" alt="cs580-astar-exe"/>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="column">
+      <h3>Object-oriented programming and Advanced C++ - CS525, etc.</h3>
+      <p>These classes are taught by Dmitri Volper, which teach advanced techniques and topics of object-oriented programming, and how they are implemented in C++, as well as quirks of C++, including pointers and type definitions. Projects include: Disjuncitve Normal Form, Problem-solving using DP (8-queen chessboard, vaccuum robot, etc.).</p>
+    </div>
+    <div class="column">
+      <h3>List of other classes:</h3>
+      <p>Game development basics - CS52</p><p>Advanced computer graphics - CS541</p><p>Game Theory - MAT5__</p><p>Introduction to Machine Learning - CS5__</p>
+    </div>
+  </div>
+
+</body>
+</html>
