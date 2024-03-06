@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rhythm Square project</title>
+<style>
+  .header {
+    background-color: #5977ea;
+    margin: 10px;
+    padding: 10px;
+    color: #ff9900;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+  }
+
+  body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #9fc5e8;
+  }
+  .container {
+    background-color: #7cd3fb;
+    border: 2px solid #5977ea;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .container-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-header {
+    border-right: 1px solid #000;
+    min-width: 200px;
+    height: 350px;
+    font-family: Arial, sans-serif;
+  }
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .code-snippet {
+    background-color: #6e6e6e;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    min-width: 430px;
+    margin: 7px;
+    padding: 7px;
+    float: right;
+    border: 1px solid #00000080;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Rhythm Square</h1>
+    <h3 style="color: #fff;">01/2024 - 02/2024</h3>
+  </div>
+
+  <div class="container">
+    <div class="container-row">
+      <div class="container-header">
+        <h2>Rhythm Square</h2>
+        <p>Unity 2021.3.22f</p>
+        <img style="max-width: 72%;" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZ0-lnxnehSq22KrvC7k-LYN9-CKPciZs4TbtOwr8GUQRLnWdcpuJI2Y_6175-5jNTV9CatKeY0t9ol7mFUxqDYtjuxHQ=s2560" alt="rhsq-logo">
+      </div>
+      <div>
+        <p>This is a 2D rhythm Unity game, where the main design principle is the simplicity. Game only requires use of one button 'Space' to play through the actual levels. The simplicity also comes through the design of the developer tools (currently in development), where to create a level, all you have to do is to activate the Record Mode (F9), and start pressing the button to the rhythm you yourself set up. After that, simply take the generated level file and replace the previous version with the new content.</p>
+        <div class="container-row">
+          <img style="margin: 25px; max-width: 18%" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZveFSYiVBNKQiWvKkVnS_sBa_qVcvYs6ntr07b88D_20hx8erDBIWAOZpbW9RK2VY_yZU0bq1gxab3yFoMPEMP7H6ZpQ=s2560" alt="rhsq-gameplay">
+          <p>In order to motivate people to play as close to the center as they can, I have added a camera based shader to display the amount of points the players earn, using Unity material features, allowing text to be changed during run-time. SFX were also implemented to let the players know whenever they failed to hit the beat, or when they succeeded to do so.</p>
+          </div>
+      </div>
+    </div>
+    <div class="container-row">
+      <p>With the code to the right, I have generalized JSON description loading for the 3 main platforms this game was designed for: PC, Android, iOS. This level loading can be used for many different platforms and can load any level set and can be further updated to include platfroms such as PlayStation, XBox, Nintendo Switch and more! This allows development flexibility and simplifies the game development process for a variety of games, as this algorithm does not specify the class that describes the game level, and only asks for a IGameInfo interface, overriden by the coder for whichever implementation is required.</p>
+      <div class="code-snippet">
+        <pre><code>#if UNITY_ANDROID || UNITY_IOS
+
+#if UNITY_IOS
+sCurLevelPath = "file://" + sCurLevelPath;
+#endif
+
+UnityWebRequest www = UnityWebRequest.Get(sCurLevelPath);
+www.SendWebRequest();
+...
+LevelInfoString = www.downloadHandler.text;
+OR
+LevelInfoString = File.ReadAllText(sCurLevelPath);
+          
+#elif UNITY_STANDALONE || UNITY_EDITOR
+          
+LevelInfoString = File.ReadAllText(sCurLevelPath);
+          
+#endif</code></pre>
+      </div>
+    </div>
+    <p style="text-align: center;">You can download the game for PC and Android <a href="https://stuckscarf.itch.io/rhythm-square">here</a>!</p>
+  </div>
+
+</body>
+</html>

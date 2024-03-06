@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guitar Smasher project</title>
+<style>
+  .header {
+    background-color: #5977ea;
+    margin: 10px;
+    padding: 10px;
+    color: #ff9900;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+  }
+
+  body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #9fc5e8;
+  }
+  .container {
+    background-color: #7cd3fb;
+    border: 2px solid #5977ea;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .container-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-header {
+    border-right: 1px solid #000;
+    min-width: 200px;
+    height: 350px;
+    font-family: Arial, sans-serif;
+  }
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .code-snippet {
+    background-color: #6e6e6e;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    min-width: 430px;
+    margin: 7px;
+    padding: 7px;
+    float: right;
+    border: 1px solid #00000080;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Guitar Smasher</h1>
+    <h3 style="color: #fff;">02/2024 - 03/2024</h3>
+  </div>
+
+  <div class="container">
+    <div class="container-row">
+      <div class="container-header">
+        <h2>Guitar Smasher</h2>
+        <p>Unity 2021.3.22f</p>
+        <img style="max-width: 72%;" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbK4vRHnvzZD9osoH2oOBUbQSNYlpvtX4GY3IAarwKGoQg_qjf-ZJC0Wl9lAsQeL3rgvoCzMYIzv9I7etge-dZm1FIzWQ=s2560" alt="rhsq-logo">
+      </div>
+      <div>
+        <p>This is a 3D rhythm Unity game inspired on other rhythm games such as 'Guitar Hero', and 'Dance Dance Revolution'. This project was a proof of concept that I could make and develop a 3D rhythm game, that utilizes my previous works, including 'Rhythm Square', and constructs a game out of each these element. In order to allow players to cater to their control preferences, I have also included the new Input Unity Package that lets me change the user controls at will, while disabling duplicate controls.</p>
+        <div class="container-row">
+          <img style="margin: 25px; max-width: 18%;" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY-yprPN7qLBOEgUZGPDxfEh5DA_axolZ5eRHMHO16cyolwGjwL26e1b5o0pQMtraLHVC7SksyN54RkqldnzosufvdF7w=s2560" alt="gtsm-timers">
+          <p>As shown on the picture to the left, I have implemented and used Unity Events to create a Timer Component capable of creating looped and delayed effects, being reset/played/stopped through code, similar to the Godot Timer component. This component can be used in many future projects, as the code is independent of other project's scripts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-row">
+      <p>In addition, I have studied Unity Shader language to create a Unity material that will duplicate the texture depending on how large the scale of the object is. This lets me create and visualize the length of longer Music Ticks without having the textures stretch, which according to playtesters, has worsened the gameplay experience. With this not only did I address the player's complaints to improve the experience, but I have also used my programming skills to learn a new skillset.</p>
+      <img style="margin: 25px; max-width: 18%" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZSwO-bIFz6pBOgBTTydVCNKQdMQhHwjCahSCa2sKnW9QDCQNgOC9HmXyfP_cwHkLA2vUyyJXhjMzIja1OgHuC7Buz_ug=s2560" alt="gtsm-dupltext">
+    </div>
+
+    <p style="text-align: center;">You can download the game for PC and Android <del><a href="">here</a></del>! WIP</p>
+  </div>
+</body>
+</html>
