@@ -74,15 +74,21 @@
   }
 
   .imgcolumn {
-    float: left;
-    width: 45%;
     padding: 5px;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
   }
-  .imgrow::after {
-    content: "";
-    clear: both;
-    display: table;
-    background-color: #7cd3fb;
+  .header-img {
+    vertical-align: middle;
+  }
+  .imgrow {
+    display: flex;
+    width: 100%;
+    background-color: #9fc5e8;
+    justify-content: center;
+    align-items: center;
   }
 </style>
 </head>
@@ -99,10 +105,10 @@
 
 <div class="imgrow">
   <div class="imgcolumn">
-    <img src="https://www.digipen.edu/sites/default/files/public/img/about/about-digipen/05-body/digipen-institute-of-technology-redmond-campus.jpg" alt="digipen-building" style="width: 150%; height: auto;"/>
+    <img class="header-img" src="https://www.digipen.edu/sites/default/files/public/img/about/about-digipen/05-body/digipen-institute-of-technology-redmond-campus.jpg" alt="digipen-building"/>
   </div>
   <div class="imgcolumn">
-    <img src="https://www.digipen.edu/sites/default/files/public/img/news/05-body/digipen-dragon-banner.jpg" alt="digipen-logo" style="width: 50%; height: auto;"/>
+    <img class="header-img" src="https://www.digipen.edu/sites/default/files/public/img/news/05-body/digipen-dragon-banner.jpg" alt="digipen-logo" width="25%"/>
   </div>
 </div>
 
